@@ -1,0 +1,340 @@
+<html>
+ <head>
+ <title>Lab 9 - HTML and CSS</title>
+ <style>
+/* ---------- Task 01 ---------- */
+#task1 {
+ font-family: Verdana;
+ padding: 10px;
+}
+
+#task1 h1 {
+ color: darkblue;
+}
+
+#task1 h3 {
+ color: gray;
+}
+
+.size-small {
+ font-size: 10px;
+}
+
+.size-normal {
+ font-size: 16px;
+}
+
+.size-big {
+ font-size: 24px;
+}
+
+.size-huge {
+ font-size: 36px;
+}
+
+.align-right {
+ text-align: right;
+}
+
+.align-left {
+ text-align: left;
+}
+
+.align-center {
+ text-align: center;
+}
+
+/* ---------- Task 02 ---------- */
+#task2 {
+ padding: 10px;
+}
+
+/* ---------- Task 03 ---------- */
+#task3 {
+ background-color: #dddddd;
+ padding: 15px;
+}
+
+.form-title {
+ color: red;
+ text-align: center;
+ font-family: Verdana;
+}
+
+#hotel-form {
+ background-color: #c8e3ff;
+}
+
+.label {
+ font-weight: bold;
+ text-align: right;
+ font-family: serif;
+}
+
+.button-row {
+ text-align: center;
+}
+
+/* ---------- Task 04 ---------- */
+#task4 {
+ background-color: #cfe3df;
+ padding: 15px;
+ font-family: Tahoma;
+}
+
+#wrapper {
+ width: 760px;
+ margin: 0 auto;
+ padding: 10px;
+ background-color: white;
+ border: 1px solid gray;
+ overflow: auto;
+}
+
+#banner {
+ background-color: #a8eeee;
+ text-align: right;
+ padding: 6px 12px;
+ margin-bottom: 12px;
+}
+
+#banner h1 {
+ margin: 0;
+ color: #1a9e9e;
+ font-weight: normal;
+}
+
+.slogan {
+ color: #1a9e9e;
+ font-size: 13px;
+}
+
+#sidebar {
+ float: left;
+ width: 150px;
+ background-color: #40e0d0;
+ border: 4px solid #008080;
+ padding: 8px;
+}
+
+#sidebar h3 {
+ color: white;
+ font-weight: normal;
+ font-size: 22px;
+ margin: 0 0 6px 0;
+}
+
+#sidebar li {
+ color: white;
+ font-size: 13px;
+}
+
+#posts {
+ float: right;
+ width: 560px;
+}
+
+.post {
+ background-color: #e6f9f9;
+ border: 3px solid #b8e8e8;
+ padding: 10px;
+ margin-bottom: 12px;
+ overflow: auto;
+}
+
+.post h3 {
+ margin: 0 0 6px 0;
+ color: #1a9e9e;
+ font-weight: normal;
+ font-size: 20px;
+}
+
+.post-date {
+ color: blue;
+ font-weight: bold;
+ border-bottom: 2px dashed blue;
+}
+
+.post-img {
+ float: right;
+ margin: 0 0 5px 10px;
+}
+
+.post p {
+ margin: 0;
+ color: #b06a6a;
+ font-size: 13px;
+}
+</style>
+ </head>
+ <body>
+
+ <!-- ========== Task 01 ========== -->
+ <div id="task1">
+ <h1>Welcome to My Web Page</h1>
+ <h3>Learning HTML is fun</h3>
+
+ <p>HTML is the <b>standard language</b> for making web pages. It was designed to be <i>simple and easy</i> to learn, and every web developer should be <u>comfortable</u> with it.</p>
+
+ <p>You can write <b><i>bold and italic</i></b> text, or <b><u>bold and underlined</u></b> text, by combining tags.</p>
+
+ <p class="size-small">This sentence is written in a small font size.</p>
+ <p class="size-normal">This sentence is written in a normal font size.</p>
+ <p class="size-big">This sentence is written in a big font size.</p>
+ <p class="size-huge">This sentence is written in a huge font size.</p>
+
+ <p class="align-right">This paragraph is aligned to the right side of the page.</p>
+ <p class="align-left">This paragraph is aligned to the left side of the page.</p>
+ <p class="align-center">This paragraph is aligned to the centre of the page.</p>
+
+ <p>To learn more, visit the <a href="https://www.w3schools.com/html/">W3Schools HTML Tutorial</a>.</p>
+
+ <img src="sample.jpg" alt="A sample picture" width="250" height="180">
+ </div>
+
+ <hr>
+
+ <!-- ========== Task 02 ========== -->
+ <div id="task2">
+ <h1>Courses Taught</h1>
+ <ol type="a">
+ <li>Web Programming</li>
+ <li>Discrete Structures</li>
+ <li>Electronic Commerce</li>
+ <li>Database Systems</li>
+ <li>Introduction to Computing</li>
+ </ol>
+
+ <h1>Nested List Example</h1>
+ <ol type="I">
+ <li>Web Programming
+ <ul type="square">
+ <li>Autumn 2014
+ <ol type="I" start="3">
+ <li>September - January</li>
+ <li>February - June</li>
+ </ol>
+ </li>
+ <li>Spring 2015</li>
+ </ul>
+ </li>
+ <li>Discrete Structures
+ <ol type="i">
+ <li>Summer 2014</li>
+ </ol>
+ </li>
+ <li>Electronic Commerce</li>
+ <li>Database Systems</li>
+ <li>Introduction to Computing</li>
+ </ol>
+ </div>
+
+ <hr>
+
+ <!-- ========== Task 03 ========== -->
+ <div id="task3">
+ <h2 class="form-title">Continental Hotel Reservation Form</h2>
+
+ <form action="/action_page.php">
+ <table id="hotel-form" border="2" align="center" cellpadding="6">
+ <tr>
+ <td class="label">Name</td>
+ <td><input type="text" name="guest_name" size="30" placeholder="Enter your name"></td>
+ </tr>
+ <tr>
+ <td class="label">eMail</td>
+ <td><input type="email" name="guest_email" size="30" value="info@continental.pk"></td>
+ </tr>
+ <tr>
+ <td class="label">Mobile No</td>
+ <td><input type="text" name="guest_mobile" size="30" placeholder="Enter your cell number"></td>
+ </tr>
+ <tr>
+ <td class="label">Arrival Time</td>
+ <td><input type="text" name="arrival_time" placeholder="Enter your arrival time"></td>
+ </tr>
+ <tr>
+ <td class="label">Departure</td>
+ <td>
+ <input type="date" name="departure_date">
+ <input type="time" name="departure_time">
+ </td>
+ </tr>
+ <tr>
+ <td class="label">Room Type</td>
+ <td>
+ <input type="radio" name="room_type" value="single"> Single
+ <input type="radio" name="room_type" value="double"> Double<br>
+ <input type="radio" name="room_type" value="suite"> Presidential Suite
+ </td>
+ </tr>
+ <tr>
+ <td class="label">Preferences</td>
+ <td>
+ <input type="checkbox" name="smoking"> Non-Smoking<br>
+ <input type="checkbox" name="internet"> Internet<br>
+ <input type="checkbox" name="mattress"> Firm Mattress
+ </td>
+ </tr>
+ <tr>
+ <td class="label">Mode of Payment</td>
+ <td>
+ <input type="checkbox" name="pay_cash"> Cash
+ <input type="checkbox" name="pay_check"> Check<br>
+ <input type="checkbox" name="pay_card"> Credit Card
+ <select name="card_type">
+ <option value="">Select Card</option>
+ <option value="visa">Visa</option>
+ <option value="master">MasterCard</option>
+ <option value="amex">American Express</option>
+ </select>
+ </td>
+ </tr>
+ <tr>
+ <td colspan="2" class="button-row"><input type="submit" value="Send Data"></td>
+ </tr>
+ </table>
+ </form>
+ </div>
+
+ <hr>
+
+ <!-- ========== Task 04 ========== -->
+ <div id="task4">
+ <div id="wrapper">
+
+ <div id="banner">
+ <h1>Victoria's Journal</h1>
+ <span class="slogan">So fresh and so clean</span>
+ </div>
+
+ <div id="sidebar">
+ <h3>Friends</h3>
+ <ul>
+ <li>100 Buddies</li>
+ <li>Big Will</li>
+ <li>Conan the Librarian</li>
+ </ul>
+ </div>
+
+ <div id="posts">
+
+ <div class="post">
+ <h3><span class="post-date">04/09/08:</span> Spatulas</h3>
+ <img class="post-img" src="spatula.jpg" alt="Spatula" width="110" height="110">
+ <p>Yesterday, I went to the store and got some much needed spatulas! (what better way to say I love myself than to buy myself a spatula?)</p>
+ </div>
+
+ <div class="post">
+ <h3><span class="post-date">04/08/08:</span> Cookie Cupcakes</h3>
+ <img class="post-img" src="cupcakes.jpg" alt="Cookie Cupcakes" width="110" height="90">
+ <p>My favorite cartoon character is cookie, and my favorite dessert is cupcakes. So Cookie Cupcakes are best of both the worlds. I wonder if the same applies for the cupcakes?</p>
+ </div>
+
+ </div>
+
+ </div>
+ </div>
+
+ </body>
+</html>
